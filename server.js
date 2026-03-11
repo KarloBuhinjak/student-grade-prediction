@@ -33,6 +33,10 @@ app.post("/predict", async (req, res) => {
   }
 });
 
+app.get("/test", (req, res) => {
+  res.send("Hello, server is working!");
+});
+
 /* SERVE REACT */
 app.use(express.static(path.join(__dirname, "./client/dist")));
 
