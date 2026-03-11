@@ -34,10 +34,10 @@ app.post("/predict", async (req, res) => {
 });
 
 /* SERVE REACT */
-app.use(express.static(path.join(__dirname, "client/dist")));
+app.use(express.static(path.join(__dirname, "./client/dist")));
 
 app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist/index.html"));
+  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
 const PORT = process.env.PORT || 3000;
