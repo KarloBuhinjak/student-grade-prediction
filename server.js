@@ -45,6 +45,8 @@ app.use((req, res) => {
   res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
+console.log("PORT:", process.env.PORT);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
